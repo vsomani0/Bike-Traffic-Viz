@@ -8,3 +8,8 @@ body {
   margin: auto;
   padding: 1em;
 }
+#map > svg > circle {
+  stroke: white;
+  fill-opacity: 50%;
+  fill: steelblue;
+}
