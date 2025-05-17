@@ -115,7 +115,7 @@ map.on("load", async () => {
   } catch (error) {
     console.error("Error loading JSON:", error); // Handle errors
   }
-  let trips = await d3.csv(
+  await d3.csv(
     "https://dsc106.com/labs/lab07/data/bluebikes-traffic-2024-03.csv",
     (trip) => {
       trip.started_at = new Date(trip.started_at);
@@ -200,8 +200,8 @@ map.on("load", async () => {
       .data(filteredStations, (d) => d.short_name)
       .join("circle") // Ensure the data is bound correctly
       .attr("r", (d) => radiusScale(d.totalTraffic))
-      .style('--departure-ratio', (d) =>
-        stationFlow(d.departures / d.totalTraffic),
+      .style("--departure-ratio", (d) =>
+        stationFlow(d.departures / d.totalTraffic)
       ); // Update circle sizes
   }
   updateTimeDisplay();
