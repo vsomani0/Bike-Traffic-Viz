@@ -12,4 +12,12 @@ body {
   stroke: white;
   fill-opacity: 50%;
   fill: steelblue;
+  pointer-events: auto;;
+}
+#time-container {
+  align-items: right;
+}
+#time-container > em,
+#time-container > time {
+  display: block;
 }

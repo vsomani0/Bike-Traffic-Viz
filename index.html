@@ -16,8 +16,19 @@
   </head>
   <body>
     <h1>🚴🏼‍♀️ Bike Traffic Visualizations</h1>
+    <div id="time-container">
+      <label for="input">Filter by time</label>
+      <input type="range" min="-1" max="1440" id="time-slider" />
+      <em id="any-time">(any time)</em>
+      <time id="selected-time"></time>
+    </div>
     <div id="map">
       <svg></svg>
+    </div>
+    <div class="legend">
+      <div style="--departure-ratio: 1" id = "departures">More departures</div>
+      <div style="--departure-ratio: 0.5" id = "balanced">Balanced</div>
+      <div style="--departure-ratio: 0" id = "arrivals">More arrivals</div>
     </div>
   </body>
 </html>
